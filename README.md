@@ -52,11 +52,6 @@ LEARNOSITY_CONSUMER_SECRET=your_consumer_secret_here
 # User Configuration
 USER_ID=demos-site
 USER_EMAIL=demo@example.com
-USER_FIRSTNAME=Demo
-USER_LASTNAME=User
-
-# API URLs (server-side)
-AUTHOR_API_URL=https://authorapi.learnosity.com/?latest-lts
 
 # Public API URLs (client-side accessible)
 NEXT_PUBLIC_AUTHOR_API_URL=https://authorapi.learnosity.com/?latest-lts
