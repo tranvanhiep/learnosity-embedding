@@ -20,7 +20,6 @@ export interface ItemsAPIRequest {
 export interface ItemsAPIResponse {
   security: string;
   request: string;
-  endpoint: string;
 }
 
 // Types for Learnosity Author API
@@ -29,8 +28,6 @@ export interface AuthorAPIRequest {
   reference: string;
   user: {
     id: string;
-    firstname: string;
-    lastname: string;
     email: string;
   };
 }
@@ -38,5 +35,4 @@ export interface AuthorAPIRequest {
 export interface AuthorAPIResponse {
   security: string;
   request: string;
-  endpoint: string;
 }
