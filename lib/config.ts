@@ -17,7 +17,7 @@ export interface Config {
 const config: Config = {
   consumerKey: process.env.LEARNOSITY_CONSUMER_KEY || '',
   consumerSecret: process.env.LEARNOSITY_CONSUMER_SECRET || '',
-  domain: process.env.DOMAIN || 'localhost',
+  domain: 'localhost',
   authorApiUrl: process.env.AUTHOR_API_URL || 'https://authorapi.learnosity.com/?latest-lts',
   itemsApiUrl: process.env.ITEMS_API_URL || 'https://items.learnosity.com/?latest-lts',
   user: {

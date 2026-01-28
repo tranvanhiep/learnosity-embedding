@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
       'items',
       {
         consumer_key: config.consumerKey,
-        domain: 'localhost',
+        domain: config.domain,
       },
       config.consumerSecret,
       itemsRequest

@@ -70,7 +70,7 @@ export default function Home() {
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-center">
                   <span className="mr-2">•</span>
-                  <strong>Next.js 14</strong> with App Router
+                  <strong>Next.js 16</strong> with App Router
                 </li>
                 <li className="flex items-center">
                   <span className="mr-2">•</span>

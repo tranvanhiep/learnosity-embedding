@@ -4,8 +4,8 @@ A modern Next.js application to render Learnosity activities and assessments usi
 
 ## 🚀 Tech Stack
 
-- **Next.js 14** with App Router
-- **React 18** with Server Components
+- **Next.js 16** with App Router
+- **React 19** with Server Components
 - **TypeScript** for type safety
 - **Tailwind CSS** for styling
 - **Learnosity SDK** (Node.js) for secure authentication
