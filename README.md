@@ -83,11 +83,13 @@ npm start
 ## 📖 Usage
 
 ### Home Page (`/`)
+
 - Overview of available endpoints
 - Links to assessment and activity pages
 - Tech stack information
 
 ### Assessment Page (`/assess`)
+
 - Renders a predefined assessment with multiple items
 - Uses Learnosity Items API
 - Includes time limits and navigation controls
@@ -95,6 +97,7 @@ npm start
 **URL:** `http://localhost:3000/assess`
 
 ### Activity Page (`/activity`)
+
 - Renders activities by ID using Author API
 - Edit mode for activity management
 - Dynamic activity loading via query parameter
@@ -102,6 +105,7 @@ npm start
 **URL:** `http://localhost:3000/activity?id=ACTIVITY_ID`
 
 **Example:**
+
 ```
 http://localhost:3000/activity?id=quickstart_examples_activity_template_001
 ```
@@ -138,6 +142,7 @@ http://localhost:3000/activity?id=quickstart_examples_activity_template_001
 ## 🔒 API Routes
 
 ### `/api/assess`
+
 - **Method:** GET
 - **Purpose:** Generate signed request for Items API
 - **Returns:** Security token, request object, and endpoint URL
@@ -145,6 +150,7 @@ http://localhost:3000/activity?id=quickstart_examples_activity_template_001
   - `user` (optional): Custom user ID
 
 ### `/api/activity`
+
 - **Method:** GET
 - **Purpose:** Generate signed request for Author API
 - **Returns:** Security token, request object, and endpoint URL
@@ -154,6 +160,7 @@ http://localhost:3000/activity?id=quickstart_examples_activity_template_001
 ## 🎨 Styling
 
 The application uses Tailwind CSS with a custom design:
+
 - Gradient backgrounds
 - Responsive cards and layouts
 - Loading spinners and animations
@@ -163,24 +170,29 @@ The application uses Tailwind CSS with a custom design:
 ## 🔧 Configuration
 
 ### TypeScript
+
 Configured in `tsconfig.json` with:
+
 - Strict type checking
 - Path aliases (`@/` for root imports)
 - Next.js specific settings
 
 ### Environment Variables
+
 - Server-side variables: Used in API routes for secure operations
 - Client-side variables: Prefixed with `NEXT_PUBLIC_` for browser access
 
 ## 🌐 Learnosity Integration
 
 ### Items API (Assessment)
+
 - Renders complete assessments
 - Uses predefined items array
 - Supports time limits and navigation
 - UUID-based session management
 
 ### Author API (Activity)
+
 - Uses `activity_edit` mode
 - Allows activity viewing and editing
 - User information from environment variables
@@ -196,17 +208,20 @@ Configured in `tsconfig.json` with:
 ## 🐛 Troubleshooting
 
 ### Build Errors
+
 - Ensure all environment variables are set in `.env.local`
 - Check TypeScript errors with `npm run build`
 - Verify Node.js version is 18+
 
 ### Runtime Errors
+
 - Verify Learnosity credentials are valid
 - Check browser console for client-side errors
 - Ensure API routes are accessible
 
 ### Learnosity Not Loading
-- Verify NEXT_PUBLIC_* environment variables are set
+
+- Verify NEXT*PUBLIC*\* environment variables are set
 - Check that Learnosity CDN is accessible
 - Inspect network requests for failed script loading
 

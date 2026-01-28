@@ -1,14 +1,18 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import Script from 'next/script';
-import Link from 'next/link';
-import type { ItemsAPIResponse } from '@/lib/types';
+import { useEffect, useState } from "react";
+import Script from "next/script";
+import Link from "next/link";
+import type { ItemsAPIResponse } from "@/lib/types";
 
 declare global {
   interface Window {
     LearnosityItems: {
-      init: (request: unknown, security: unknown, callbacks?: Record<string, unknown>) => void;
+      init: (
+        request: unknown,
+        security: unknown,
+        callbacks?: Record<string, unknown>,
+      ) => void;
     };
   }
 }
@@ -22,14 +26,14 @@ export default function AssessPage() {
   useEffect(() => {
     async function fetchInitData() {
       try {
-        const response = await fetch('/api/assess');
+        const response = await fetch("/api/assess");
         if (!response.ok) {
-          throw new Error('Failed to initialize assessment');
+          throw new Error("Failed to initialize assessment");
         }
         const data: ItemsAPIResponse = await response.json();
         setInitData(data);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Unknown error');
+        setError(err instanceof Error ? err.message : "Unknown error");
       } finally {
         setLoading(false);
       }
@@ -46,16 +50,16 @@ export default function AssessPage() {
 
         const callbacks = {
           readyListener() {
-            console.log('Learnosity Items API is ready');
+            console.log("Learnosity Items API is ready");
           },
           errorListener(err: Error) {
-            console.error('Learnosity error:', err);
+            console.error("Learnosity error:", err);
           },
         };
 
         window.LearnosityItems.init(request, security, callbacks);
       } catch (err) {
-        setError('Failed to initialize Learnosity Items');
+        setError("Failed to initialize Learnosity Items");
         console.error(err);
       }
     }
@@ -94,9 +98,12 @@ export default function AssessPage() {
     <>
       {initData && (
         <Script
-          src={process.env.NEXT_PUBLIC_ITEMS_API_URL || 'https://items.learnosity.com/?latest-lts'}
+          src={
+            process.env.NEXT_PUBLIC_ITEMS_API_URL ||
+            "https://items.learnosity.com/?latest-lts"
+          }
           onLoad={() => setScriptLoaded(true)}
-          onError={() => setError('Failed to load Learnosity script')}
+          onError={() => setError("Failed to load Learnosity script")}
         />
       )}
 
@@ -113,9 +120,12 @@ export default function AssessPage() {
 
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="mb-6">
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Assessment Demo</h1>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                Assessment Demo
+              </h1>
               <p className="text-gray-600">
-                This assessment uses the Learnosity Items API with predefined items.
+                This assessment uses the Learnosity Items API with predefined
+                items.
               </p>
             </div>
 

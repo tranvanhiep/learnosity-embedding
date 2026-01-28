@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -26,7 +26,8 @@ export default function Home() {
                   📝 Assessment
                 </h3>
                 <p className="text-gray-700 mb-4">
-                  Render assessments with predefined items using Learnosity Items API
+                  Render assessments with predefined items using Learnosity
+                  Items API
                 </p>
                 <Link
                   href="/assess"
@@ -93,8 +94,12 @@ export default function Home() {
 
             <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
               <p className="text-sm text-blue-800">
-                <strong>Note:</strong> Make sure to configure your Learnosity credentials in{' '}
-                <code className="bg-blue-100 px-2 py-1 rounded">.env.local</code> file.
+                <strong>Note:</strong> Make sure to configure your Learnosity
+                credentials in{" "}
+                <code className="bg-blue-100 px-2 py-1 rounded">
+                  .env.local
+                </code>{" "}
+                file.
               </p>
             </div>
           </div>
